@@ -2,8 +2,8 @@
   gather_facts: false
   tasks:
     - name: Install collection
-      shell: "ansible-galaxy collection install community.general" 
-      
+      shell: "pip install proxmoxer" 
+
     - name: Create new container with minimal options
       community.general.proxmox:
         api_host: node1
