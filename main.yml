@@ -7,10 +7,12 @@
     - name: Create new container with minimal options
       community.general.proxmox:
         api_host: 192.168.68.57
-        api_token_id: root@pam!root
-        api_token_secret: faecf9ef-3933-476c-96d8-b9b4e393f556
+        api_user: 'root@pam'
+        api_token_id: 'root@pam!root'
+        api_token_secret: 'faecf9ef-3933-476c-96d8-b9b4e393f556'
         vmid: 100
         node: uk-mc02
-        hostname: "promox.local.com:8006"
+        hostname: nuevo.com
         ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
+        description: created with ansible
       delegate_to: localhost
