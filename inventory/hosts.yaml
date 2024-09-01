@@ -1,0 +1,6 @@
+application:
+  children:
+    app-network-develop:
+      hosts:
+        proxmox:
+          ansible_host: 192.168.68.57
