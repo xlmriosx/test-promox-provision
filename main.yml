@@ -7,7 +7,6 @@
     - name: Create new container with minimal options
       community.general.proxmox:
         api_host: 192.168.68.57
-        api_user: root@pam
         api_token_id: root@pam!root
         api_token_secret: faecf9ef-3933-476c-96d8-b9b4e393f556
         vmid: 100
