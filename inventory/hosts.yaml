@@ -1,6 +1,6 @@
-application:
+all:
   children:
-    app-network-develop:
+    proxmox:
       hosts:
-        proxmox:
+        SRVPRXMOX01:
           ansible_host: 192.168.68.57
