@@ -8,7 +8,9 @@
       community.general.proxmox:
         api_host: 192.168.68.57
         api_user: 'root@pam'
-        api_token_secret: 'faecf9ef-3933-476c-96d8-b9b4e393f556'
+        # api_token_id: 'root@pam!root'
+        # api_token_secret: 'faecf9ef-3933-476c-96d8-b9b4e393f556'
+        password: admin
         vmid: 100
         node: uk-mc02
         hostname: nuevo.com
