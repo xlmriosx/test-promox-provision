@@ -11,3 +11,4 @@
         node: uk-mc02
         hostname: "promox.local.com:8006"
         ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
+      delegate_to: localhost
