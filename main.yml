@@ -1,0 +1,13 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Create new container with minimal options
+      community.general.proxmox:
+        api_host: node1
+        api_user: root@pam
+        api_token_id: root@pam!root
+        api_token_secret: faecf9ef-3933-476c-96d8-b9b4e393f556
+        vmid: 100
+        node: uk-mc02
+        hostname: "promox.local.com:8006"
+        ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
