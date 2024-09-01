@@ -10,7 +10,7 @@
         api_user: 'root@pam'
         api_token_id: 'root-ansible'
         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
-        vmid: 100
+        vmid: 1232
         node: promox
         hostname: nuevo.com
         ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
