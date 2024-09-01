@@ -29,14 +29,6 @@
 #   - import_role: 
 #       name: proxmox/cloud-init
 
-- name: proxmox_cloudinit.yml
-  hosts: 192.168.68.57
-  gather_facts: true
-  vars_prompt: 
-  - name: "ansible_password"
-    prompt: "jeropa14"
-    private: yes
-  vars: 
-    ansible_user: root
+- hosts: all
   tasks:
     - include_tasks: tasks/main.yml
