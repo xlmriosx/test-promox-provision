@@ -1,6 +1,9 @@
 - hosts: all
   gather_facts: false
   tasks:
+    - name: Install collection
+      shell: "ansible-galaxy collection install community.general" 
+      
     - name: Create new container with minimal options
       community.general.proxmox:
         api_host: node1
