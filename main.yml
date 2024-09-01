@@ -1,30 +1,35 @@
-# - hosts: all
-#   gather_facts: false
-#   tasks:
-#     - name: Install collection
-#       shell: "pip install proxmoxer" 
+# # - hosts: all
+# #   gather_facts: false
+# #   tasks:
+# #     - name: Install collection
+# #       shell: "pip install proxmoxer" 
 
-#     - name: Create new container with minimal options
-#       community.general.proxmox:
-#         api_host: 192.168.68.57
-#         api_user: 'root@pam'
-#         api_token_id: 'root-ansible'
-#         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
-#         vmid: 1232
-#         node: promox
-#         hostname: nuevo.com
-#         ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
-#         description: created with ansible
-#       delegate_to: localhost
-- name: proxmox_cloudinit.yml
-  hosts: 192.168.68.57
-  gather_facts: true
-  vars_prompt: 
-  - name: "ansible_password"
-    prompt: "jeropa14"
-    private: yes
-  vars: 
-    ansible_user: ansible
+# #     - name: Create new container with minimal options
+# #       community.general.proxmox:
+# #         api_host: 192.168.68.57
+# #         api_user: 'root@pam'
+# #         api_token_id: 'root-ansible'
+# #         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
+# #         vmid: 1232
+# #         node: promox
+# #         hostname: nuevo.com
+# #         ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
+# #         description: created with ansible
+# #       delegate_to: localhost
+# - name: proxmox_cloudinit.yml
+#   hosts: 192.168.68.57
+#   gather_facts: true
+#   vars_prompt: 
+#   - name: "ansible_password"
+#     prompt: "jeropa14"
+#     private: yes
+#   vars: 
+#     ansible_user: root
+#   tasks:
+#   - import_role: 
+#       name: proxmox/cloud-init
+
+- hosts: all
+  gather_facts: false
   tasks:
-  - import_role: 
-      name: proxmox/cloud-init
+    - include_tasks: tasks/main.yml
