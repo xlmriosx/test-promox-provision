@@ -13,8 +13,9 @@
         api_token_id: 'root-ansible'
         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
         vmid: 1010
-        node: promox
-        clone: 8001 # 'ubuntu-20.04-server'
+        node: 
+        ostemplate: 'ubuntu-20.04-server'
+        #clone: 8001 # 'ubuntu-20.04-server'
         hostname: test.com
         description: created with ansible
         timeout: 300
