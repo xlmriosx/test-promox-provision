@@ -14,7 +14,7 @@
         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
         vmi : 1010
         node : promox
-        clone: 'ubuntu-20.04-server'
+        clone: 8001 # 'ubuntu-20.04-server'
         description: created with ansible
         timeout: 300
       delegate_to: localhost
