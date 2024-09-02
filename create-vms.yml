@@ -11,6 +11,6 @@
         api_token_id: 'root-ansible'
         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
         name : "ubuntu-20.04-server-test"
-        node : "proxmox1 "
+        node : "c1"
         clone: "ubuntu-20.04-server"
         timeout: 300
