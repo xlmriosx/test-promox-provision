@@ -5,16 +5,16 @@
     - name: Install collection
       shell: "pip install proxmoxer"
       delegate_to: localhost
-      
+
     - name: Cloning virtual machine ubuntu-20.04-server 
-      proxmox_kvm:
+      community.general.proxmox:
         api_host : 192.168.68.57
         api_user : root@pam
         api_token_id: 'root-ansible'
         api_token_secret: '0d164179-51fb-437f-9dc8-34b94b067c96'
-        name : "ubuntu-20.04-server-test"
+        vmi : 1010
         node : promox
-        ostemplate: 'ubuntu-20.04-server'
+        clone: 'ubuntu-20.04-server'
         description: created with ansible
         timeout: 300
       delegate_to: localhost
