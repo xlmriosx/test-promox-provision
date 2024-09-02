@@ -2,6 +2,8 @@
   become: false
   gather_facts: false
   tasks:
+    - name: Install collection
+      shell: "pip install proxmoxer"
     - name: Cloning virtual machine ubuntu-20.04-server 
       proxmox_kvm:
         api_host : "192.168.68.57"
