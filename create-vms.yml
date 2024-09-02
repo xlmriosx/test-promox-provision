@@ -15,6 +15,7 @@
         vmi : 1010
         node : promox
         clone: 8001 # 'ubuntu-20.04-server'
+        hostname: test.com
         description: created with ansible
         timeout: 300
       delegate_to: localhost
